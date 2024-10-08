@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bday Wish</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear Love.</strong>
+                        <p>
+                            Happy Birthday, my love! 🎂💖
+                            From the time I fell for you in 7th grade to when we both realized our love in 10th, our journey has been nothing short of beautiful. 💑✨ We've been through everything – the highs, the laughs, the unforgettable moments. 💕
+                            Even though we’ve had our ups and downs, my heart is full of love for you. I dream of the day we can hold each other again. 🫂 I miss you so much, and I can't wait to be with you, feeling the warmth of our love. 💖 
+                            Happy Birthday, my forever love. Let’s make more memories together, because you’ll always have my heart. 💖
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <div class="floating-container">
+        <div class="love-symbol">&#10084;</div>
+        <div class="balloon-symbol">🎈</div>
+        <div class="star-symbol">⭐</div>
+        <div class="flower-symbol">🌸</div>
+        <div class="gift-symbol">🎁</div>
+        <div class="cake-symbol">🎂</div>
+        <div class="heart-symbol">❤️</div>
+        <div class="confetti-symbol">🎉</div>
+        <div class="party-symbol">🥳</div>
+        <div class="sparkles-symbol">✨</div>
+
+        <!-- Extra Symbols -->
+        <div class="extra-symbol" style="font-size: 52px; animation-duration: 12s;">🍰</div>
+        <div class="extra-symbol" style="font-size: 34px; animation-duration: 7s;">🌟</div>
+        <div class="extra-symbol" style="font-size: 26px; animation-duration: 11s;">🎇</div>
+        <div class="extra-symbol" style="font-size: 40px; animation-duration: 62s;">🎈</div>
+        <div class="extra-symbol" style="font-size: 38px; animation-duration: 14s;">🌹</div>
+        <div class="extra-symbol" style="font-size: 42px; animation-duration: 5s;">🧁</div>
+        <div class="extra-symbol" style="font-size: 28px; animation-duration: 9s;">🍾</div>
+        <div class="extra-symbol" style="font-size: 22px; animation-duration: 8s;">🥳</div>
+        <div class="extra-symbol" style="font-size: 24px; animation-duration: 20s;">🍭</div>
+        <div class="extra-symbol" style="font-size: 33px; animation-duration: 8s;">🕯️</div>
+        <div class="extra-symbol" style="font-size: 48px; animation-duration: 3s;">🎊</div>
+        <div class="extra-symbol" style="font-size: 27px; animation-duration: 13s;">💌</div>
+        <div class="extra-symbol" style="font-size: 19px; animation-duration: 15s;">🎆</div>
+        <div class="extra-symbol" style="font-size: 17px; animation-duration: 11s;">🦄</div>
+        <div class="extra-symbol" style="font-size: 32px; animation-duration: 5s;">💐</div>
+        <div class="extra-symbol" style="font-size: 43px; animation-duration: 3s;">🌈</div>
+        <div class="extra-symbol" style="font-size: 32px; animation-duration: 12s;">🍬</div>
+        <div class="extra-symbol" style="font-size: 24px; animation-duration: 1s;">🍧</div>
+        <div class="extra-symbol" style="font-size: 58px; animation-duration: 15s;">💖</div>
+        <div class="extra-symbol" style="font-size: 3px; animation-duration: 19s;">💫</div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+        document.querySelector('.heart').addEventListener('click', function() {
+        const letter = document.querySelector('.flap > .envelope > .letter');
+        letter.classList.toggle('visible'); // Add a class to trigger CSS changes
+    });
+    </script>
+</body>
+</html>

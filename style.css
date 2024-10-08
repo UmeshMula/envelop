@@ -1,0 +1,189 @@
+:root {
+    --primary: #fff;
+    --bg-color: #f1e8cd; 
+    --bg-gradient-start: #ff6a6a;
+    --bg-gradient-end: #ffefba;
+    --bg-envelope-color: #f5edd1;
+    --envelope-tab: #ecdeb8;
+    --envelope-cover: #e6cfa7;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --heart-color: rgb(252, 8, 231);
+}
+
+
+.floating-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.floating-container div {
+    position: absolute;
+    opacity: 0.9;
+    animation: float 10s linear infinite;
+}
+
+/* Define float animation */
+
+/* Symbol sizes and animations */
+.love-symbol { top: 10%; left: 10%; animation-duration: 60s; }
+.balloon-symbol { top: 15%; left: 20%; animation-duration: 8s; }
+.star-symbol { top: 50%; left: 30%; animation-duration: 70s; }
+.flower-symbol { top: 10%; left: 40%; animation-duration: 9s; }
+.gift-symbol { top: 20%; left: 60%; animation-duration: 50s; }
+.cake-symbol { top: 30%; left: 20%; animation-duration: 10s; }
+.heart-symbol { top: 15%; left: 70%; animation-duration: 120s; }
+.confetti-symbol { top: 30%; left: 80%; animation-duration: 150s; }
+.party-symbol { top: 15%; left: 20%; animation-duration: 400s; }
+.sparkles-symbol { top: 10%; left: 30%; animation-duration: 30s; }
+
+/* Extra Symbols */
+.extra-symbol {
+    font-size: 50px;
+    animation: float  linear infinite;
+}
+
+.extra-symbol:nth-child(1) {  top: 10%; left: 30%; font-size: 40px; animation-duration: 120s; }
+.extra-symbol:nth-child(2) { top: 15%; left: 20%;font-size: 50px; animation-duration: 80s; }
+.extra-symbol:nth-child(3) { top: 10%; left: 10%; font-size: 25px; animation-duration: 100s; }
+.extra-symbol:nth-child(4) {top: 15%; left: 20%; font-size: 35px; animation-duration: 60s; }
+.extra-symbol:nth-child(5) { top: 20%; left: 60%; font-size: 75px; animation-duration: 450s; }
+.extra-symbol:nth-child(6) {  top: 15%; left: 70%; font-size: 40px; animation-duration: 4s; }
+.extra-symbol:nth-child(7) {  top: 10%; left: 30%; font-size: 30px; animation-duration: 79s; }
+.extra-symbol:nth-child(8) {  top: 15%; left: 20%; font-size: 25px; animation-duration: 7s; }
+.extra-symbol:nth-child(9) {  top: 10%; left: 30%; font-size: 40px; animation-duration: 13s; }
+.extra-symbol:nth-child(10) {top: 30%; left: 80%; font-size: 30px; animation-duration: 88s; }
+.extra-symbol:nth-child(11) { top: 20%; left: 60%; font-size: 50px; animation-duration: 3s; }
+.extra-symbol:nth-child(12) {top: 30%; left: 80%; font-size: 25px; animation-duration: 51s; }
+.extra-symbol:nth-child(13) {  top: 15%; left: 20%; font-size: 20px; animation-duration: 14s; }
+.extra-symbol:nth-child(14) {top: 30%; left: 80%; font-size: 15px; animation-duration: 12s; }
+.extra-symbol:nth-child(15) { top: 20%; left: 60%; font-size: 35px; animation-duration: 5s; }
+.extra-symbol:nth-child(16) {   top: 55%; left: 90%; font-size: 40px; animation-duration: 6s; }
+.extra-symbol:nth-child(17) {  top: 15%; left: 90%; font-size: 30px; animation-duration: 10s; }
+.extra-symbol:nth-child(18) {  top: 91%; left: 30%; font-size: 105px; animation-duration: 9s; }
+.extra-symbol:nth-child(19) {top: 50%; left: 30%; font-size: 200px; animation-duration: 15s; }
+.extra-symbol:nth-child(20) { top: 20%; left: 80%; font-size: 30px; animation-duration: 8s; }
+
+
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container > .envelope-wrapper {
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+}
+
+.envelope-wrapper > .envelope {
+  position: relative;
+  width: 300px;
+  height: 230px;
+}
+.envelope-wrapper > .envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid var(--envelope-tab);
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+.envelope-wrapper > .envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 150px solid var(--envelope-cover);
+  border-bottom: 100px solid var(--envelope-cover);
+  border-left: 150px solid var(--envelope-cover);
+}
+.envelope > .letter {
+    position: absolute;
+    top: 0; /* Starting position from the top */
+    right: 10%; /* Align right */
+    left: 55px; /* Align left */
+    background: var(--primary);
+    text-align: center;
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+    box-shadow: 0 0 5px var(--shadow-color);
+    padding: 20px 10px;
+    z-index: 1;
+    height: 0; /* Start with height 0 for hidden state */
+    overflow: hidden; /* Hide overflowing text */
+}
+
+/* Adjust these properties */
+.flap > .envelope > .letter {
+    height: 200px; /* Set height for the letter when expanded */
+    top: -200px; /* Move the letter completely above the envelope flap */
+    transition: height 0.5s ease-out, top 0.5s ease-out; /* Transition for height and position */
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    cursor: pointer;
+}
+
+.heart:before, 
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -7.5px;
+}
+
+.heart:after {
+    right: 7.5px;
+}
+
+.flap > .envelope:before {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.flap > .heart {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+}
+
+/* Add this for the visible state */
+.envelope > .letter.visible {
+    height: auto; /* Adjust height to accommodate full text */
+    top: -200px; /* Ensure it is fully visible above the envelope */
+    padding: 20px 10px; /* Add padding to the expanded letter */
+    overflow: visible; /* Allow overflowing text to be visible */
+}
+
